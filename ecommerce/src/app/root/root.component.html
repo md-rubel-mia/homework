@@ -1,0 +1,32 @@
+<mat-toolbar class="navbar">  
+    <div class="logo">
+        <img
+          src="https://www.48hourslogo.com/48hourslogo_data/2017/09/20/65541_1505882244.jpg"
+          alt="logo"
+          [routerLink] = "['/dashboard']"
+        />
+        
+    </div>
+      <div class="navOptions">
+        <span [routerLink] = "['/dashboard']" >Dashboard</span>
+        <span [routerLink] = "['/products']" >Product</span>
+        <span [routerLink] = "['/myCart']"  >MyCart</span>
+      </div>
+
+        <div class="cart">
+          <div class="image">
+               <img
+                  src="https://pngimage.net/wp-content/uploads/2018/06/shopping-cart-logo-vector-png-3.png"
+                  alt="cart_icon"
+              />
+              <button (click) = "showCart()" mat-mini-fab color="accent">{{cartCount}}</button>
+          </div>
+      </div>
+     
+</mat-toolbar>
+
+<div class="outlet">
+  <app-cart-panel *ngIf = "cartButton"></app-cart-panel>
+  <router-outlet></router-outlet>
+</div>
+

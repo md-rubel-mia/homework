@@ -1,0 +1,92 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$ecommerce-primary: mat-palette($mat-indigo);
+$ecommerce-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$ecommerce-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$ecommerce-theme: mat-light-theme($ecommerce-primary, $ecommerce-accent, $ecommerce-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($ecommerce-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 16px; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: Gainsboro; }
+h3,p,h4{
+    margin: 0px !important;
+}
+.circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 1;
+}
+.card{
+    background: white;
+    padding: 10px;
+}
+.c-one{
+    background-color:BlueViolet;
+}
+.c-two{
+    background-color:Brown;
+
+}
+.c-three{
+    background-color: darkkhaki;
+}
+.c-four{
+     background-color: Crimson;
+}
+.info{
+    font-size: 10px;
+    color: gray;
+    line-height: 10px;
+}
+small{
+    color: gray;
+    font-size: 10px;
+}
+.icon{
+    font-size: 15px;
+    height: 15px !important;
+    width: 15px !important;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  tr:hover {background-color:#f5f5f5;}
+  select{
+    border: 0px !important;
+    outline: 0px !important;
+}

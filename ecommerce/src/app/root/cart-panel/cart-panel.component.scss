@@ -1,0 +1,76 @@
+.cart{
+    position: absolute;
+    position: fixed;
+    z-index: 100000;
+    right: 10px;
+    width: 200px;
+    background: #fefefe;
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+     box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+     .cartClose{
+         display: flex;
+         justify-content: space-between;
+         padding: 10px 10px 2px 10px;
+        button{
+            cursor: pointer;
+            height: 30px;
+            padding: 2px;
+            color: red;
+        }
+     }
+     .cartCalculation{
+         max-height: 300px;
+         overflow: auto;
+        .cartCount{
+            border-bottom: 1px solid gray;
+            padding: 2px 5px 2px 5px;
+            display: flex;
+            justify-content: space-between;
+            img{
+               //  height: 20px;
+                width: 33%;
+            }
+            .incDecDiv{
+                width: 30%;
+                .nameDiv{
+                   span{
+                       display: block;
+                       text-align: center;
+                   }
+                   .price{
+                      color: grey;
+                   }
+                }
+                .incDec{
+                    display: flex;
+                    justify-content: space-between;
+                    .add, .remove{
+                        border-radius: 50%;
+                        color: white;
+                        cursor: pointer;
+                        background-color: darkslategray;
+                        border: 1px solid grey;
+                        padding: 1px 5px 1px 5px;
+                    }
+                }
+                .cancel{
+                    span{
+                        cursor: pointer;
+                    }
+                    border: 1px solid black;
+                    width: 33%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+     }
+
+     h3{
+         padding: 0 0 0 5px;
+     }
+    
+}

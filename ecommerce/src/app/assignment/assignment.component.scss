@@ -1,0 +1,113 @@
+.second-container{
+    margin-top: 16px;
+    .left-section{
+        box-sizing: border-box;
+        .approve, .refuse{
+            margin-top: 5px;
+            width: 50px;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        .approve{
+            border: 2px solid LightGreen;
+            color:LightGreen;
+        }
+        .refuse{
+            border: 2px solid red;
+            color: red;
+        }
+        .item{
+            overflow: hidden;
+            padding: 10px;
+          
+            position: relative;
+            &::after,
+            &::before{
+                content: '';
+                position: absolute;
+                background-color: Gainsboro;
+            }
+            &::before{
+                width: 2px;
+                height: 100%;
+                top: 0;
+                left: 25px;
+            }
+            &::after{
+                width: 100%;
+                height: 2px;
+                bottom: 0;
+                left: 25px;
+            }
+            &:last-child{
+                // &::after{
+                //     width: 0;
+                //     height: 0;
+                // }
+                // &::before{
+                //     top: -60%;
+                // }
+            }
+           &:nth-child(2){
+               &::before{
+                  top: 50%;
+               }
+           }
+            
+        }
+    }
+    .right-section{
+        .mid-section{
+            padding: 10px;
+        }
+        .price{
+            font-size: 35px;
+            color:DarkTurquoise;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+      
+        .table-row>:nth-child(5){
+            color:DarkTurquoise;
+        }
+    }
+   
+}
+.third-section{
+    margin-top: 16px;
+    .t-left > div{
+        margin-bottom: 20px;
+    }
+    .tech{
+       width: 100px ;
+       height: 20px ;
+       background: cornflowerblue;
+       color: white;
+       border-radius: 5px;
+       text-align: center;   
+    }
+    img{
+       object-fit: cover;
+       width: 100%;
+       height: 200px;
+    }
+    .t-right > * {
+        margin-bottom: 16px !important;
+    }
+    .t-left{
+        .table-row{
+            div{
+                width: 50px;
+                height: 25px;
+                border-radius: 5px;
+                background-color: darkslateblue;
+                color:white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+    
+}

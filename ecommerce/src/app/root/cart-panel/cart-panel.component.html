@@ -1,0 +1,32 @@
+<div *ngIf = "hide" class="cart">
+     <div class="cartClose">
+          <h3>My Cart</h3>
+          <button (click) = "hideCart()">Close</button>
+     </div>
+     <hr>
+     <div class="cartCalculation">
+
+          <div *ngFor = "let cart of cartArray" class="cartCount">
+               <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="CartItemImage">
+               <div class="incDecDiv">
+                    <div class="nameDiv">
+                         <span class="name">{{cart.productName}}</span>
+                         <span class="price">{{cart.price * cart.cartQuantity}}</span>
+                    </div>
+                    <div class="incDec">
+                         <span (click) = "add(cart.id)" class="add">+</span>
+                         <span>{{cart.cartQuantity}}</span>
+                         <span (click) = "remove(cart.id)" class="remove">-</span>
+                    </div>
+               </div>
+               <div class="cancel">
+                    <span (click) = "removeItem(cart.id)" class="material-icons">
+                         cancel
+                    </span>
+               </div>
+               
+          </div>
+     </div>
+     
+     <h3>Total Amount: {{total}} BDT </h3>
+</div>

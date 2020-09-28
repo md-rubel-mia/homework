@@ -1,0 +1,38 @@
+.productHeader{
+    h1{
+        color: CadetBlue;
+    }
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+table {
+    width: 100%;
+}
+.mat-elevation-z8{
+     min-width: 800px;  
+     position: absolute;
+     left: 20%;
+}
+.material-icons{
+    cursor: pointer;
+}
+
+.pop-up{
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    padding: 20px;
+    background: #fefefe;
+    button{
+       cursor: pointer; 
+       margin: 5px;
+     }
+     .cancel{
+        background: grey;
+        color: white;
+    }
+}

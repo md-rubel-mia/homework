@@ -1,0 +1,28 @@
+<div class="empty" *ngIf="!productArray.length">
+       <h2>Your cart is empty!</h2>
+</div>
+
+<div class="card">
+    <mat-card *ngFor= "let product of productArray" class="example-card">
+        <div class="imageDiv">
+            <img class = "img"
+            src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+            <div class="overlay">
+                <button mat-raised-button>Show Details</button>
+            </div>
+        </div>
+        <mat-card-content class="cardContent">
+            <h3>Name: {{product.productName}}</h3>
+            <p>Price: {{product.price}} BDT</p>
+            <span>Available Quantity: {{product.quantity}}</span>
+        </mat-card-content>
+         <div class="btn">
+            <div *ngIf="!product.cartQuantity" (click) = "addToCart(product.id)" class="addtoCart addtoCart{{product.id}}"  > Add to Cart</div>
+            <div *ngIf = "product.cartQuantity" class="incDecButton"  >
+                <p (click) = "addItem(product.id)" class="add" mat-flat-button >+</p>
+                <p class="cartQuantity" mat-flat-button >{{product.cartQuantity}}</p>
+                <p (click) = "removeItem(product.id)" class="remove" mat-flat-button >-</p>
+            </div>
+         </div> 
+      </mat-card>
+</div>
